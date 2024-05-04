@@ -1,0 +1,66 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports&Fitness/myvenues</title>
+    <style>
+      body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+h2 {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  margin: 0;
+}
+
+p:first-child {
+  font-weight: bold;
+}
+
+p:not(:first-child) {
+  margin-top: 10px;
+}
+
+    </style>
+  </head>
+  <body>
+    <h2>My Venues</h2>
+    {{#if venues.length}}
+      <ul>
+        {{#each venues}}
+          <li>
+            <p>Owner Name: {{ownerName}}</p>
+            <p>Venue Name: {{venueName}}</p>
+            <p>Address: {{address}}</p>
+            <p>Contact: {{contact}}</p>
+            <p>Email: {{email}}</p>
+            <p>Services: {{services}}</p>
+            <p>Opening Time: {{openingtime}}</p>
+            <p>Closing Time: {{closingtime}}</p>
+          </li>
+        {{/each}}
+      </ul>
+    {{else}}
+      <p>No venues found.</p>
+    {{/if}}                   
+  </body>
+</html>

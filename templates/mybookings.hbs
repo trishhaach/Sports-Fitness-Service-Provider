@@ -1,0 +1,71 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports&Fitness/mybookings</title>
+    <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+h2 {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  margin: 0;
+}
+
+p:first-child {
+  font-weight: bold;
+}
+
+p:not(:first-child) {
+  margin-top: 10px;
+}
+ a {
+  text-decoration: none;
+  color: #333;
+  margin-right: 10px;
+}
+</style>
+  </head>
+  <body>
+    <h2>My Bookings</h2>
+    <a href="/userhome">Home</a>
+    {{#if bookings.length}}
+      <ul>
+        {{#each bookings}}
+          <li>
+            <p>Your booking for {{venue.venueName}} at {{venue.address}}:</p>
+            <p>Username: {{username}}</p>
+            <p>Phone Number: {{phonenumber}}</p>
+            <p>Email: {{email}}</p>
+            <p>Number of People: {{numberofpeople}}</p>
+            <p>Services: {{services}}</p>
+            <p>Date: {{date}}</p>
+            <p>Time: {{time}}</p>
+          </li>
+        {{/each}}
+      </ul>
+    {{else}}
+      <p>No bookings found for this user.</p>
+    {{/if}}
+  </body>
+</html>

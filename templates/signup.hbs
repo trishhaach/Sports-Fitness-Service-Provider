@@ -1,0 +1,94 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports&Fitness/signup</title>
+    <style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+
+  .form-group input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .form-group input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="password"] {
+    transition: border-color 0.3s ease;
+  }
+
+  .form-group input[type="text"]:focus,
+  .form-group input[type="password"]:focus {
+    border-color: #4caf50;
+    outline: none;
+  }
+
+
+</style>
+  </head>
+  
+  <body>
+
+   <div class="container">
+  <h2>Signup</h2>
+  <form action="/signup" method="post">
+    <div class="form-group">
+      <input type="text" name="username" placeholder="Username" required>
+    </div>
+    <div class="form-group">
+      <input type="text" name="phonenumber" placeholder="Contact" required>
+    </div>
+    <div class="form-group">
+      <input type="email" name="email" placeholder="Email" required>
+    </div>
+    <div class="form-group">
+      <input type="password" name="password" placeholder="Password" required>
+    </div>
+    <div class="form-group">
+      <input type="password" name="confirmpassword" placeholder="Confirm Password" required>
+    </div>
+    <div class="form-group">
+      <input type="submit" value="SignUp">
+    </div>
+     Already have an account? Go back to login <br>
+     <a href="login">Login</a>
+  </form>
+</div>
+    
+
+  </body>
+</html>

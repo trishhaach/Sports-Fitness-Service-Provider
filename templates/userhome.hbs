@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports&Fitness/userhome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #bb9696;  /* Light background color */
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            margin-right: 10px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        li {
+            background-color: #dca8a8; /* Light shade color */
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        p {
+            margin: 0;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .book-now-btn {
+            display: block;
+            width: 120px;
+            padding: 10px 20px;
+            margin-top: 10px;
+            text-align: center;
+            background-color: #4caf50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .book-now-btn:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            /* Your existing footer styles */
+            transition: opacity 0.3s ease; /* Add smooth transition for opacity */
+            opacity: 0; /* Initially hide the footer */
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333; /* Dark background color */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            z-index: 999; /* Ensure footer appears on top of other content */
+        }
+
+
+
+
+         
+
+
+        .image-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            width: 50%;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .slogan-overlay {
+            padding: 20px;
+            font-size: 24px;
+            color: #333;
+            border-radius: 8px;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>User Home</h2>
+        <div class="navbar">
+            <a href="/userhome">Home</a>
+            <a href="/mybookings">My Booking</a>
+            <a href="/userlogout">Logout</a>
+            <a href="/userdeleteaccount">Delete Account</a>
+        </div>
+        <br>
+        <div class="image-container">
+            <img src="image1.jpg" alt="Image 1">
+            <div class="slogan-overlay"> <strong>Sweat Today, Shine Tomorrow with Fitness!</strong></div>
+        </div>
+
+        <ul>
+            {{#each venues}}
+            <li>
+                <p>Owner Name: {{ownerName}}</p>
+                <p>Venue Name: {{venueName}}</p>
+                <p>Address: {{address}}</p>
+                <p>Contact: {{contact}}</p>
+                <p>Email: {{email}}</p>
+                <p>Services: {{services}}</p>
+                <p>Opening Time: {{openingtime}}</p>
+                <p>Closing Time: {{closingtime}}</p>
+                <a href="/booking?venueId={{_id}}" class="book-now-btn">Book Now</a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+   
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
